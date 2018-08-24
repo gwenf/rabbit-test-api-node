@@ -1,3 +1,5 @@
 # Student Management System
 
-Details coming soon
+Instructions:
+
+1. 
