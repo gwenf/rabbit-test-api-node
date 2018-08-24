@@ -25,7 +25,7 @@ module.exports = function addStudent(req, res, next) {
       }).then(null, () => {
         console.warn
         res.send(student);
-      );
+      });
     });
 };
 
