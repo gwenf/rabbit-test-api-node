@@ -16,6 +16,10 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 app.use('/api/', routes);
 
+app.use('/', (req, res) => {
+  res.render('hello');
+});
+
 // models.sequelize.sync().then(() => {
   app.listen(port, '0.0.0.0', () => {
     console.log(`server running at port ${port}`);
