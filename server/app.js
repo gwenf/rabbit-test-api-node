@@ -14,11 +14,11 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyParser.json());
-app.use('/api/', routes);
+// app.use('/api/', routes);
 
-models.sequelize.sync().then(() => {
+// models.sequelize.sync().then(() => {
   app.listen(port, '0.0.0.0', () => {
     console.log(`server running at port ${port}`);
   });
-});
+// });
 
