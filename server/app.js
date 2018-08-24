@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const routes = require('./routes');
-const models = require('./models');
 const bodyParser = require('body-parser');
 
 const port = process.env.NODE_ENV || '4000';
@@ -20,9 +19,7 @@ app.use('/', (req, res) => {
   res.render('hello');
 });
 
-models.sequelize.sync().then(() => {
-  app.listen(port, '0.0.0.0', () => {
-    console.log(`server running at port ${port}`);
-  });
+app.listen(port, '0.0.0.0', () => {
+  console.log(`server running at port ${port}`);
 });
 
