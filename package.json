@@ -1,0 +1,29 @@
+{
+  "name": "back-end-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npm run lint && nodemon server/app.js",
+    "lint": "eslint server",
+    "fix": "eslint --fix \"server/**/*.js\"",
+    "prestart": "npm run lint",
+    "start": "node server/app.js",
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "eslint": "^4.14.0",
+    "eslint-config-google": "^0.9.1",
+    "express": "^4.16.2",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.28.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.7"
+  }
+}
